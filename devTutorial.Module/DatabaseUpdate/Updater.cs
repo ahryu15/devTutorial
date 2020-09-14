@@ -11,6 +11,7 @@ using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
+using devTutorial.Module.BusinessObjects;
 
 namespace devTutorial.Module.DatabaseUpdate {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Updating.ModuleUpdater
@@ -26,6 +27,18 @@ namespace devTutorial.Module.DatabaseUpdate {
             //    theObject = ObjectSpace.CreateObject<DomainObject1>();
             //    theObject.Name = name;
             //}
+
+            Contact contactMary = ObjectSpace.FindObject<Contact>(CriteriaOperator.Parse("FirstName == 'Mary' && LastName == 'Tellitson'"));
+            if(contactMary == null)
+            {
+                contactMary = ObjectSpace.CreateObject<Contact>();
+                contactMary.FirstName = "Mary";
+                contactMary.LastName = "Tellitson";
+                contactMary.Email = "tellitson@example.com";
+                contactMary.Birthday = new DateTime(1980, 11, 27);
+            }
+            ObjectSpace.CommitChanges();
+
 			CreateDefaultRole();
         }
         public override void UpdateDatabaseBeforeUpdateSchema() {
