@@ -13,14 +13,13 @@ using DevExpress.ExpressApp.Templates;
 using DevExpress.ExpressApp.Utils;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Validation;
-using devTutorial.Module.BusinessObjects;
 
 namespace devTutorial.Module.Controllers
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
-    public partial class ClearContactTasksController : ViewController
+    public partial class FindBySubjectController : ViewController
     {
-        public ClearContactTasksController()
+        public FindBySubjectController()
         {
             InitializeComponent();
             // Target required Views (via the TargetXXX properties) and create their Actions.
@@ -41,26 +40,17 @@ namespace devTutorial.Module.Controllers
             base.OnDeactivated();
         }
 
-        private void ClearTasksAction_Execute(object sender, SimpleActionExecuteEventArgs e)
+        private void FindBySubjectAction_Execute(object sender, ParametrizedActionExecuteEventArgs e)
         {
-            while (((Contact)View.CurrentObject).Tasks.Count > 0)
+            IObjectSpace objectSpace = Application.CreateObjectSpace(((ListView)View).ObjectTypeInfo.Type);
+            string paramValue = e.ParameterCurrentValue as string;
+            object obj = objectSpace.FindObject(((ListView)View).ObjectTypeInfo.Type, CriteriaOperator.Parse(string.Format("Contains([Subject], '{0}')", paramValue)));
+            if (obj != null)
             {
-                ((Contact)View.CurrentObject).Tasks.Remove(((Contact)View.CurrentObject).Tasks[0]);
+                DetailView detailView = Application.CreateDetailView(objectSpace, obj);
+                detailView.ViewEditMode = DevExpress.ExpressApp.Editors.ViewEditMode.Edit;
+                e.ShowViewParameters.CreatedView = detailView;
             }
-            ObjectSpace.SetModified(View.CurrentObject);
-        }
-
-        private void ClearContactTasksController_Activated(object sender, EventArgs e)
-        {
-            // Enables the ClearTasks Action if the current Detail View's ViewEditMode property
-            // is set to ViewEditMode.Edit.
-            ClearTasksAction.Enabled.SetItemValue("EditMode", ((DetailView)View).ViewEditMode == ViewEditMode.Edit);
-            ((DetailView)View).ViewEditModeChanged += new EventHandler<EventArgs>(ClearContactTasksController_ViewEditModeChanged);
-        }
-
-        private void ClearContactTasksController_ViewEditModeChanged(object sender, EventArgs e)
-        {
-            ClearTasksAction.Enabled.SetItemValue("EditMode", ((DetailView)View).ViewEditMode == ViewEditMode.Edit);
         }
     }
 }
