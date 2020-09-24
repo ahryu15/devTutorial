@@ -60,6 +60,16 @@ namespace devTutorial.Module.BusinessObjects
         //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
         //    this.PersistentProperty = "Paid";
         //}
+
+        [Action(ToolTip ="Postpone the task to the next day")]
+        public void Postpone()
+        {
+            if (DueDate == DateTime.MinValue)
+            {
+                DueDate = DateTime.Now;
+            }
+            DueDate = DueDate + TimeSpan.FromDays(1);
+        }
     }
     
     public enum Priority

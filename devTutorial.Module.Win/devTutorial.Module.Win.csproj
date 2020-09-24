@@ -144,6 +144,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\WinNullTextEditorController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\WinNullTextEditorController.Designer.cs">
+      <DependentUpon>WinNullTextEditorController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
@@ -153,7 +159,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\WinNullTextEditorController.resx">
+      <DependentUpon>WinNullTextEditorController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\ExpressAppLogo.png" />
