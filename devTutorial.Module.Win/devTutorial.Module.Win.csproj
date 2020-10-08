@@ -144,6 +144,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\WinAlternatingRowsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\WinAlternatingRowsController.Designer.cs">
+      <DependentUpon>WinAlternatingRowsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\WinNullTextEditorController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\WinAlternatingRowsController.resx">
+      <DependentUpon>WinAlternatingRowsController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controllers\WinNullTextEditorController.resx">
       <DependentUpon>WinNullTextEditorController.cs</DependentUpon>
     </EmbeddedResource>

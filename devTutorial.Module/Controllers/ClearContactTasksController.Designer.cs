@@ -36,7 +36,7 @@
             this.ClearTasksAction.Caption = "Clear Tasks";
             this.ClearTasksAction.Category = "View";
             this.ClearTasksAction.ConfirmationMessage = "작업 목록을 모두 삭제하겠습니까?";
-            this.ClearTasksAction.Id = "9446da7c-86dd-4a43-ab9a-e8dac5810c6f";
+            this.ClearTasksAction.Id = "ClearTasksAction";
             this.ClearTasksAction.ImageName = "Action_Clear";
             this.ClearTasksAction.ToolTip = null;
             this.ClearTasksAction.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.ClearTasksAction_Execute);
