@@ -76,7 +76,18 @@ namespace devTutorial.Module.BusinessObjects
         public Department Department
         {
             get { return department; }
-            set { SetPropertyValue(nameof(Department), ref department, value); }
+            set 
+            { 
+                SetPropertyValue(nameof(Department), ref department, value);
+                if (!IsLoading)
+                {
+                    Position = null;
+                    if (Manager != null && Manager.Department != value)
+                    {
+                        Manager = null;
+                    }
+                }
+            }
         }
 
         private Contact manager;

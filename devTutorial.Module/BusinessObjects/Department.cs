@@ -46,5 +46,11 @@ namespace devTutorial.Module.BusinessObjects
         {
             get { return GetCollection<Contact>(nameof(Contacts)); }
         }
+
+        [Association("Departments-Positions")]
+        public XPCollection<Position> Positions
+        {
+            get { return GetCollection<Position>(nameof(Positions)); }
+        }
     }
 }
