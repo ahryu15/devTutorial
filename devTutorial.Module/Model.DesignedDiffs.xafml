@@ -14,6 +14,18 @@
     </ActionToContainerMapping>
   </ActionDesign>
   <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PhoneNumber">
+      <OwnMembers>
+        <Member Name="Number" EditMask="(000)0000-0000" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Task">
+      <OwnMembers>
+        <Member Name="DueDate" DisplayFormat="{0:D}" />
+        <Member Name="PercentCompleted" DisplayFormat="{0:N0}%" EditMask="N0" />
+        <Member Name="StartDate" DisplayFormat="{0:D}" />
+      </OwnMembers>
+    </Class>
     <Class Name="devTutorial.Module.BusinessObjects.Contact" ObjectCaptionFormat="{0:FullName} from the {0:Department}">
       <OwnMembers>
         <Member Name="Position" DataSourceProperty="Department.Positions" DataSourcePropertyIsNullMode="SelectAll" />
