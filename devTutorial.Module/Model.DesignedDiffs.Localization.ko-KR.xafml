@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="devTutorial.Module.BusinessObjects.Contact" Caption="연락처" />
+  </BOModel>
+</Application>
