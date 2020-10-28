@@ -129,5 +129,19 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Contact_ListView">
+      <Columns>
+        <ColumnInfo Id="Anniversary" Index="-1" />
+        <ColumnInfo Id="Manager" Index="-1" />
+        <ColumnInfo Id="NickName" Index="-1" />
+        <ColumnInfo Id="SpouseName" Index="-1" />
+        <ColumnInfo Id="TitleOfCourtesy" Index="-1" />
+        <ColumnInfo Id="WebPageAddress" Index="-1" />
+        <ColumnInfo Id="FullName" Width="144" />
+        <ColumnInfo Id="Position" Index="1" Width="120" />
+        <ColumnInfo Id="Department" Index="2" Width="139" />
+        <ColumnInfo Id="Email" Index="3" Width="151" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
