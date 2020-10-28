@@ -43,7 +43,15 @@
   <CreatableItems>
     <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Event" IsNewNode="True" />
   </CreatableItems>
-  <NavigationItems ShowImages="False" />
+  <NavigationItems ShowImages="False">
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Note" ViewId="Note_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
