@@ -143,6 +143,7 @@
         <ColumnInfo Id="Email" Index="3" Width="151" />
       </Columns>
     </ListView>
+    <ListView Id="DemoTask_ListView" AllowEdit="True" NewItemRowPosition="Bottom" />
     <ListView Id="Department_ListView" MasterDetailMode="ListViewAndDetailView" />
   </Views>
 </Application>
