@@ -64,4 +64,66 @@
       <RuleCriteria Id="TaskIsNotStarted" TargetType="devTutorial.Module.BusinessObjects.DemoTask" Criteria="Status != 'NotStarted'" TargetContextIDs="MarkCompleted" CustomMessageTemplate="Cannot set the task as completed because it has not started" IsNewNode="True" />
     </Rules>
   </Validation>
+  <Views>
+    <DetailView Id="Contact_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="42.64859228362878">
+            <LayoutGroup Id="Contact" RelativeSize="36.185819070904643">
+              <LayoutGroup Id="Contact_col1" RelativeSize="49.930069930069934">
+                <LayoutItem Id="WebPageAddress" RelativeSize="28.94736842105263" />
+                <LayoutItem Id="NickName" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="SpouseName" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="TitleOfCourtesy" RelativeSize="28.94736842105263" />
+              </LayoutGroup>
+              <LayoutGroup Id="Contact_col2" ShowCaption="False" Index="1" RelativeSize="50.069930069930066" IsNewNode="True" Removed="True">
+                <LayoutItem Id="Anniversary" ViewItem="Anniversary" Index="0" RelativeSize="28.94736842105263" IsNewNode="True" />
+                <LayoutItem Id="Position" ViewItem="Position" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="Department" ViewItem="Department" Index="2" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="Manager" ViewItem="Manager" Index="3" RelativeSize="28.94736842105263" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Person" RelativeSize="42.787286063569681">
+              <LayoutGroup Id="Person_col1" RelativeSize="49.930069930069934">
+                <LayoutItem Id="FirstName" RelativeSize="22" />
+                <LayoutItem Id="LastName" RelativeSize="16" />
+                <LayoutItem Id="MiddleName" RelativeSize="62" />
+              </LayoutGroup>
+              <TabbedGroup Id="Item1" CaptionLocation="Top" Index="1" RelativeSize="50.069930069930066" IsNewNode="True">
+                <LayoutGroup Id="Person_col2" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="DisplayName" ViewItem="DisplayName" Index="0" RelativeSize="28.94736842105263" IsNewNode="True" />
+                  <LayoutItem Id="Birthday" ViewItem="Birthday" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
+                  <LayoutItem Id="FullName" ViewItem="FullName" Index="2" RelativeSize="21.05263157894737" IsNewNode="True" />
+                  <LayoutItem Id="Email" ViewItem="Email" Index="3" RelativeSize="28.94736842105263" IsNewNode="True" />
+                </LayoutGroup>
+              </TabbedGroup>
+              <LayoutGroup Id="Person_col2" RelativeSize="50.06954102920723" Removed="True">
+                <LayoutItem Id="DisplayName" ViewItem="DisplayName" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="Birthday" Index="1" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="FullName" Index="2" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="Email" Index="3" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" RelativeSize="21.026894865525673">
+              <LayoutItem Id="Photo" RelativeSize="36.046511627906973" />
+              <LayoutItem Id="Address1" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="Address2" RelativeSize="36.046511627906973" />
+              <LayoutItem Id="DisplayName" ViewItem="DisplayName" Index="3" RelativeSize="27.777777777777779" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="28.67570385818561">
+            <LayoutItem Id="Notes" RelativeSize="100" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="28.67570385818561">
+            <LayoutGroup Id="Tasks" RelativeSize="100">
+              <LayoutItem Id="Tasks" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" RelativeSize="100">
+              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>
