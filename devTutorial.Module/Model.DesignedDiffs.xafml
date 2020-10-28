@@ -143,5 +143,6 @@
         <ColumnInfo Id="Email" Index="3" Width="151" />
       </Columns>
     </ListView>
+    <ListView Id="Department_ListView" MasterDetailMode="ListViewAndDetailView" />
   </Views>
 </Application>
