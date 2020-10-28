@@ -66,6 +66,9 @@
   </Validation>
   <Views>
     <DetailView Id="Contact_DetailView">
+      <Items>
+        <PropertyEditor Id="Department.Office" PropertyName="Department.Office" IsNewNode="True" />
+      </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="42.64859228362878">
@@ -81,6 +84,7 @@
                 <LayoutItem Id="Position" ViewItem="Position" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
                 <LayoutItem Id="Department" ViewItem="Department" Index="2" RelativeSize="21.05263157894737" IsNewNode="True" />
                 <LayoutItem Id="Manager" ViewItem="Manager" Index="3" RelativeSize="28.94736842105263" IsNewNode="True" />
+                <LayoutItem Id="Department.Office" ViewItem="Department.Office" IsNewNode="True" />
               </LayoutGroup>
             </LayoutGroup>
             <LayoutGroup Id="Person" RelativeSize="42.787286063569681">
