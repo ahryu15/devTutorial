@@ -40,6 +40,9 @@
     </Class>
     <Class Name="devTutorial.Module.BusinessObjects.Position" ImageName="BO_Position" />
   </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Event" IsNewNode="True" />
+  </CreatableItems>
   <NavigationItems ShowImages="False" />
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
