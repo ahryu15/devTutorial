@@ -3,6 +3,7 @@
   <ActionDesign>
     <Actions>
       <Action Id="ClearTasksAction" ToolTip="Clear the current Contact's tasks" Shortcut="Control+Shift+C" ConfirmationMessage="Are you sure you want to clear the {0}'s Tasks list?" />
+      <Action Id="Task.MarkCompleted" ValidationContexts="MarkCompleted" />
     </Actions>
     <ActionToContainerMapping>
       <ActionContainer Id="RecordEdit">
@@ -58,4 +59,9 @@
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
   </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleCriteria Id="TaskIsNotStarted" TargetType="devTutorial.Module.BusinessObjects.DemoTask" Criteria="Status != 'NotStarted'" TargetContextIDs="MarkCompleted" CustomMessageTemplate="Cannot set the task as completed because it has not started" IsNewNode="True" />
+    </Rules>
+  </Validation>
 </Application>
