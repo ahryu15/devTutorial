@@ -110,6 +110,12 @@
     <Compile Include="Controllers\ClearContactTasksController.Designer.cs">
       <DependentUpon>ClearContactTasksController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\FilterListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\FilterListView.Designer.cs">
+      <DependentUpon>FilterListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\FindBySubjectController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -140,6 +146,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controllers\ClearContactTasksController.resx">
       <DependentUpon>ClearContactTasksController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\FilterListView.resx">
+      <DependentUpon>FilterListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\FindBySubjectController.resx">
       <DependentUpon>FindBySubjectController.cs</DependentUpon>

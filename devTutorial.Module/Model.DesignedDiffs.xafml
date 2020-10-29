@@ -129,7 +129,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Contact_ListView">
+    <ListView Id="Contact_ListView" Filter="Position.Title = 'Developer'">
       <Columns>
         <ColumnInfo Id="Anniversary" Index="-1" />
         <ColumnInfo Id="Manager" Index="-1" />
@@ -142,6 +142,11 @@
         <ColumnInfo Id="Department" Index="2" Width="139" />
         <ColumnInfo Id="Email" Index="3" Width="151" />
       </Columns>
+      <Filters CurrentFilterId="Developers">
+        <Filter Id="All Contacts" IsNewNode="True" />
+        <Filter Id="Developers" Criteria="Position.Title = 'Developer'" IsNewNode="True" />
+        <Filter Id="Development Department Contacts" Criteria="[Department.Title] = 'Development'" IsNewNode="True" />
+      </Filters>
     </ListView>
     <ListView Id="DemoTask_ListView" AllowEdit="True" NewItemRowPosition="Bottom" PreviewColumnName="Description" />
     <ListView Id="Department_ListView" MasterDetailMode="ListViewAndDetailView" />
