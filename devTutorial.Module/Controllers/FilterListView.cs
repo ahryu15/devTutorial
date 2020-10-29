@@ -43,10 +43,10 @@ namespace devTutorial.Module.Controllers
 
         private void FilterListView_Activated(object sender, EventArgs e)
         {
-            if ((View is ListView) & (View.ObjectTypeInfo.Type == typeof(Contact)))
-            {
-                ((ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator("Position.Title", "Developer", BinaryOperatorType.Equal);
-            }
+            //if ((View is ListView) & (View.ObjectTypeInfo.Type == typeof(Contact)))
+            //{
+            //    ((ListView)View).CollectionSource.Criteria["Filter1"] = new BinaryOperator("Position.Title", "Developer", BinaryOperatorType.Equal);
+            //}
         }
     }
 }

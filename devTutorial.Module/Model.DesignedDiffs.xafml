@@ -129,7 +129,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Contact_ListView" Filter="Position.Title = 'Developer'">
+    <ListView Id="Contact_ListView" Filter="" IsGroupPanelVisible="True">
       <Columns>
         <ColumnInfo Id="Anniversary" Index="-1" />
         <ColumnInfo Id="Manager" Index="-1" />
@@ -138,11 +138,11 @@
         <ColumnInfo Id="TitleOfCourtesy" Index="-1" />
         <ColumnInfo Id="WebPageAddress" Index="-1" />
         <ColumnInfo Id="FullName" Width="144" />
-        <ColumnInfo Id="Position" Index="1" Width="120" />
-        <ColumnInfo Id="Department" Index="2" Width="139" />
-        <ColumnInfo Id="Email" Index="3" Width="151" />
+        <ColumnInfo Id="Email" Index="1" Width="151" />
+        <ColumnInfo Id="Position" Index="2" Width="120" SortOrder="Ascending" GroupIndex="1" />
+        <ColumnInfo Id="Department" Index="3" Width="139" SortOrder="Ascending" GroupIndex="0" />
       </Columns>
-      <Filters CurrentFilterId="Developers">
+      <Filters CurrentFilterId="All Contacts">
         <Filter Id="All Contacts" IsNewNode="True" />
         <Filter Id="Developers" Criteria="Position.Title = 'Developer'" IsNewNode="True" />
         <Filter Id="Development Department Contacts" Criteria="[Department.Title] = 'Development'" IsNewNode="True" />
