@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application PreferredLanguage="ko-KR">
+  <Options UIType="MultipleWindowSDI" />
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SystemWindowsFormsModule" Version="20.1.7.0" IsNewNode="True" />
