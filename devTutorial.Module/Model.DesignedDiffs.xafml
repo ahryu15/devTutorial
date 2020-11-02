@@ -44,9 +44,9 @@
   <CreatableItems>
     <CreatableItem ClassName="DevExpress.Persistent.BaseImpl.Event" IsNewNode="True" />
   </CreatableItems>
-  <NavigationItems ShowImages="False">
+  <NavigationItems ShowImages="False" NavigationStyle="NavBar">
     <Items>
-      <Item Id="Default">
+      <Item Id="Default" ChildItemsDisplayStyle="List">
         <Items>
           <Item Id="Note" ViewId="Note_ListView" IsNewNode="True" />
         </Items>
