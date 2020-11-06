@@ -41,6 +41,7 @@
     <Reference Include="DevExpress.Data.v20.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -82,6 +83,7 @@
     <Reference Include="System">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>

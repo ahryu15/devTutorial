@@ -105,6 +105,20 @@ namespace devTutorial.Module.BusinessObjects
         {
             get { return GetCollection<DemoTask>(nameof(Tasks)); }
         }
+
+        private XPCollection<AuditDataItemPersistent> changeHistory;
+        [CollectionOperationSet(AllowAdd = false, AllowRemove = false)]
+        public XPCollection<AuditDataItemPersistent> ChangeHistory
+        {
+            get
+            {
+                if(changeHistory == null)
+                {
+                    changeHistory = AuditedObjectWeakReference.GetAuditTrail(Session, this);
+                }
+                return changeHistory;
+            }
+        }
     }
     public enum TitleOfCourtesy { Dr, Miss, Mr, Mrs, Ms };
 

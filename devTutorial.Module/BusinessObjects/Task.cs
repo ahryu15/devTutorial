@@ -11,11 +11,14 @@ using System.Collections.Generic;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
+using DevExpress.ExpressApp.ConditionalAppearance;
 
 namespace devTutorial.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ModelDefault("Caption", "Task")]
+    [Appearance("FontColorRed", AppearanceItemType = "ViewItem", TargetItems = "*", Context = "ListView", Criteria = "Status!='Completed'", FontColor = "Red")]
+    [Appearance("PriorityBackColorPink", AppearanceItemType = "ViewItem", TargetItems = "Priority", Context = "Any", Criteria = "Priority=2", BackColor = "255, 240, 240")]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
